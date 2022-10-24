@@ -6,6 +6,8 @@ import PickSinger from './pages/PickSinger'
 import PickGuitarist from './pages/PickGuitarist'
 import PickBassist from './pages/PickBassist'
 import PickDrummer from './pages/PickDrummer'
+import BandConfirm from './pages/BandConfirm'
+import Stage from './pages/Stage'
 
 const App = () => {
   return (
@@ -18,8 +20,8 @@ const App = () => {
           <Route path="/PickGuitarist" element={<PickGuitarist />} />
           <Route path="/PickBassist" element={<PickBassist />} />
           <Route path="/PickDrummer" element={<PickDrummer />} />
-          <Route path="/" element={<NameBand />} />
-          <Route path="/" element={<NameBand />} />
+          <Route path="/BandConfirm" element={<BandConfirm />} />
+          <Route path="/Stage" element={<Stage />} />
         </Routes>
       </main>
     </div>

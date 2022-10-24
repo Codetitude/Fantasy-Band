@@ -1,9 +1,18 @@
+import {Link} from 'react-router-dom'
+
+
+
+
 const NavBar = () => {
 
-  return(
-    <div></div>
+  return (
+    <header>
+      <nav>
+        <Link to = '/'>Create a Band</Link>
+       
+      </nav>
+    </header>
   )
 }
-
 
 export default NavBar
