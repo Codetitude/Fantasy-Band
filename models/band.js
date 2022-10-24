@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
-const BandIsFormed = new Schema(
+const Band = new Schema(
   {
     name: { type: String, required: true },
     image: { type: String, required: true },
@@ -11,4 +11,4 @@ const BandIsFormed = new Schema(
   { timestamps: true }
 )
 
-module.exports = mongoose.model('BandIsFormed', BandIsFormed)
+module.exports = mongoose.model('Band', Band)

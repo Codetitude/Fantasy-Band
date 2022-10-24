@@ -1,12 +1,12 @@
 const mongoose = require('mongoose')
-const MusicanSchema = require('./musican')
-const BandIsFormedSchema = require('./bandIsFormed')
+const MusicianSchema = require('./musician')
+const BandSchema = require('./band')
 
-const Musican = mongoose.model('Musican', MusicanSchema)
+const Musician = mongoose.model('Musician', MusicianSchema)
 
-const BandIsFormed = mongoose.model('BandIsFormed', BandIsFormedSchema)
+const Band = mongoose.model('Band', BandSchema)
 
 module.exports = {
-  Musican,
-  BandIsFormed
+  Musician,
+  Band
 }
