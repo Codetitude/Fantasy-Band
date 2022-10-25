@@ -14,7 +14,7 @@ const PickSinger = (props) => {
     rating: 0
 
   }
-const[ formState , setFormState] = useState(initialState)
+//const[ formState , setFormState] = useState(initialState)
 
 
 let button 
@@ -34,24 +34,54 @@ setFormState({value: e.target.value})*/
 
 
   return(
-    <div>
-    <h2> Choose your Singer!</h2>
-    <form  onSubmit={ props.handleSubmit} >
+    <div className="musicianForm">
+    <h2 className="musicianTitle"> Choose your Singer!</h2>
+    <br></br>
+    <form   >
       <label> Choose an artist:
-        <select  onChange={props.handleChange} name={"name"}>
-          <option value = 'name'>Robert Plant
-            
-          </option>
-        </select>
-        
+        </label>
 
-      </label>
-    
+       <input 
+      type = 'text'
+      value = {props.name}
+      onChange = {props.handleChange}
+      placeholder = "Musician Name" />
 
 
-</form>
+      <br></br>
+      <label> Band Origin:
+        </label>
+
+      <input 
+      type = 'text'
+      value = {props.bandOrigin}
+      onChange = {props.handleChange}
+      placeholder = "Band Origin" />
+
+      <br></br>
+      <label> Role:
+        </label>
+      <input 
+      type = 'text'
+      value = {props.role}
+      onChange = {props.handleChange}
+      placeholder = "Role" />
+<br></br>
+
+<label> Rating:
+        </label>
+      <input 
+      type = 'text'
+      value = {props.rating}
+      onChange = {props.handleChange}
+      placeholder = "Role" />
+      <br></br>
+      <br></br>
 
 {button}
+</form>
+
+
     </div>
   )
 }
@@ -61,29 +91,11 @@ export default PickSinger
 
 
 
-      <input
-        type="text"
-        name="name"
-        placeholder="Your
-         Name"
-        value={props.name}
-        onChange={props.handleChange}
-      />
-      <br></br>
-      <br></br>
-      <input
-        type="text"
-        name="email"
-        placeholder="Your Email"
-        value={props.email}
-        onChange={props.handleChange}
-      />
-      <br></br>
-      <br></br>
-      <input
-        type="text"
-        name="age"
-        placeholder="Your Age"
-        value={props.age}
-        onChange={props.handleChange}
-      />
+   
+/*<select  onChange={props.handleChange} name={"name"}>
+<option  type = "text " value = {props.name}>Robert Plant
+  
+</option>
+</select>
+
+</label> */

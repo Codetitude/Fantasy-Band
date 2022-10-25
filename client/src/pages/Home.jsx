@@ -19,22 +19,22 @@ const Home = (props) => {
       page = <AddBand incrementPage={props.incrementPage} />
       break
     case 1:
-      page = <PickSinger handleChange={props.handleChange}  incrementPage={props.incrementPage} name={props.name} email={props.email} age={props.age} />
+      page = <PickSinger handleChange={props.handleChange}  incrementPage={props.incrementPage}  />
       break
     case 2:
-      page = <PickGuitarist   handleChange={props.handleChange}  incrementPage={props.incrementPage} name={props.name} email={props.email} age={props.age} />
+      page = <PickGuitarist   handleChange={props.handleChange}  incrementPage={props.incrementPage} />
       break
     case 3:
-      page = <PickBassist  handleChange={props.handleChange}  incrementPage={props.incrementPage} name={props.name} email={props.email} age={props.age} />
+      page = <PickBassist  handleChange={props.handleChange}  incrementPage={props.incrementPage}  />
       break
     case 4:
-      page = <PickDrummer handleChange={props.handleChange}  incrementPage={props.incrementPage} name={props.name} email={props.email} age={props.age} />
+      page = <PickDrummer handleChange={props.handleChange}  incrementPage={props.incrementPage}  />
       break
     case 5:
-      page = <BandConfirm  handleChange={props.handleChange}  incrementPage={props.incrementPage} name={props.name} email={props.email} age={props.age} />
+      page = <BandConfirm  handleChange={props.handleChange}  incrementPage={props.incrementPage}  />
       break
     case 6:
-      page = <Stage handleChange={props.handleChange}  incrementPage={props.incrementPage} name={props.name} email={props.email} age={props.age} />
+      page = <Stage handleChange={props.handleChange}  incrementPage={props.incrementPage} />
       break
 
     default:
