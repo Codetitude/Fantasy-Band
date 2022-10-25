@@ -10,8 +10,9 @@ if (props.name === '' || props.bandOrigin === '' || props.role === ''){
 
   return(
     <div className="musicianForm">
+   
+    <form  className="artistForm"  >
     <h2 className="musicianTitle"> Choose your Guitarist!</h2>
-    <form   >
       <label> Choose an artist:
         </label>
 

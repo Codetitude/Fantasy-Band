@@ -16,8 +16,9 @@ const PickDrummer = (props) => {
   return(
     
       <div className="musicianForm">
+    
+    <form   className="artistForm" >
     <h2 className="musicianTitle"> Choose your Drummer!</h2>
-    <form   >
       <label> Choose an artist:
         </label>
 

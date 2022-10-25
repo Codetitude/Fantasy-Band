@@ -18,7 +18,8 @@ Nav {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  height: 3em;
+  height: 5em;
+  width: 100vw;
 }
 
 a {
@@ -29,6 +30,13 @@ a {
 header nav a {
   margin: 0 1em;
 }
+
+
+body {
+background-color: aqua;
+
+}
+
 
 .hometitle {
 
@@ -43,21 +51,31 @@ header nav a {
   justify-content: center;
   font-size: 100px;
   align-items: center;
+  flex-wrap: wrap;
 
  }
 
  .musicianForm {
+
+  background-color: white;
   display: flex;
+  
   justify-content: center;
-  align-items: flex-end;
-  height: 100px;
-  padding: 100px;
+  align-items: center;
+  height: 45vh;
+  padding: 50px;
   flex-wrap: wrap;
+  border: 10px solid black;
+  border-radius: 15px;
+  margin: 20px;
  }
 
+
+
+
  .musicianTitle {
-  align-self:flex-start;
-  flex-wrap:wrap;
+
+  background-color: crimson;
  }
 
  button {

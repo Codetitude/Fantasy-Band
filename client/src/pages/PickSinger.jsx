@@ -17,7 +17,7 @@ const PickSinger = (props) => {
 //const[ formState , setFormState] = useState(initialState)
 
 
-let button 
+let button
 if (props.name === '' || props.bandOrigin === '' || props.role === ''){
  button =<button disabled>Next</button>
 } else {
@@ -35,9 +35,10 @@ setFormState({value: e.target.value})*/
 
   return(
     <div className="musicianForm">
-    <h2 className="musicianTitle"> Choose your Singer!</h2>
+    
     <br></br>
-    <form   >
+    <form className="artistForm"  >
+    <h2 className="musicianTitle"> Choose your Singer!</h2>
       <label> Choose an artist:
         </label>
 
