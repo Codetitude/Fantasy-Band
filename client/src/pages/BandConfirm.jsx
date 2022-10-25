@@ -12,6 +12,9 @@ const BandConfirm = (props) => {
 
   return(
     <div>
+
+<h1> {props.newBand.name}</h1>
+
       {button}
     </div>
   )

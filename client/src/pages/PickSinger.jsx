@@ -5,20 +5,11 @@ import { useState } from "react"
 
 const PickSinger = (props) => {
 
-
-  const initialState = {
-    name: '',
-    bandOrigin: '',
-    image: '',
-    role: '',
-    rating: 0
-
-  }
-//const[ formState , setFormState] = useState(initialState)
+const [singerChoice , setsingerChoice] = useState([])
 
 
 let button
-if (props.name === '' || props.bandOrigin === '' || props.role === ''){
+if (props.name === '' ){
  button =<button disabled>Next</button>
 } else {
   button = <button onClick={props.incrementPage}>Next</button>
@@ -39,6 +30,7 @@ setFormState({value: e.target.value})*/
     <br></br>
     <form className="artistForm"  >
     <h2 className="musicianTitle"> Choose your Singer!</h2>
+      <div className="inputfield">
       <label> Choose an artist:
         </label>
 
@@ -53,7 +45,7 @@ setFormState({value: e.target.value})*/
       <label> Band Origin:
         </label>
 
-      <input 
+      <span
       type = 'text'
       value = {props.bandOrigin}
       onChange = {props.handleChange}
@@ -78,6 +70,8 @@ setFormState({value: e.target.value})*/
       placeholder = "Role" />
       <br></br>
       <br></br>
+
+      </div>
 
 {button}
 </form>

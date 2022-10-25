@@ -11,7 +11,7 @@ const PickDrummer = (props) => {
   }
   
 
-
+// add a handle submit to add the total rating together
 
   return(
     

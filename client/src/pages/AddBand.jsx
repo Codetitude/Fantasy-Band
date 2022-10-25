@@ -3,35 +3,42 @@ import {  useState } from 'react'
 
 
 
+
 const AddBand = (props) => {
 
-  const [newBand, setNewBand] = useState({
-    name: "",
-    members: [],
-    totalRating: 0
-  })
-
-const [ singer , setSinger] = useState (false)
-const [searchQuery, setSearchQuery] = useState('')
+  const [bandName ,setBandName] = useState('')
 
 
+const handleChange = (e) =>{
+  setBandName(e.target.value)
+}
 
+
+const handleSubmit = (e) => {
+  e.preventDefault()
+  props.setNewBand({...props.newBand, name: bandName})
+  props.incrementPage()
+  console.log(props.newBand)
+
+}
 
 
 
   return(
     <div>
       <h1 className='hometitle'>Fantasy Band </h1>
-      <form className = " nameband " onSubmit={props.onSubmit}>
+      
 <input
+
+
   type="text"
   name="search"
-  value={props.value}
+  value={props.bandName}
   placeholder="Give your band a name!"
-  onChange={props.onChange}
+  onChange={handleChange}
 ></input>
-<button  onClick = {props.incrementPage}type='submit'>Enter</button>
-    </form>
+<button  onClick = {handleSubmit}type='submit'>Enter</button>
+    
 
 
     </div>

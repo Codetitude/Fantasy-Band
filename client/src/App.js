@@ -7,22 +7,15 @@ import { useState } from 'react'
 const App = () => {
   const [currentPage, setCurrentPage] = useState(0)
 
-  const initialState = {
-    name: '',
-    bandOrigin: '',
-    image: '',
-    role: '',
-    rating: 0
-  }
-  const [formState, setFormState] = useState(initialState)
-
-  const handleChange = (e) => {
-    setFormState({ ...formState, [e.target.name]: e.target.value })
-  }
-
   const incrementPage = () => {
     setCurrentPage((prevState) => prevState + 1)
   }
+
+  const [newBand, setNewBand] = useState({
+    name: '',
+    members: [],
+    totalRating: 0
+  })
 
   return (
     <div>
@@ -30,12 +23,9 @@ const App = () => {
       <main>
         <Home
           currentPage={currentPage}
-          name={formState.name}
-          bandOrigin={formState.bandOrigin}
-          role={formState.role}
-          rating={formState.rating}
           incrementPage={incrementPage}
-          handleChange={handleChange}
+          newBand={newBand}
+          setNewBand={setNewBand}
         />
       </main>
     </div>

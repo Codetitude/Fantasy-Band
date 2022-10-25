@@ -70,13 +70,14 @@ background-color: aqua;
   margin: 20px;
  }
 
-
-
-
  .musicianTitle {
 
   background-color: crimson;
+  border-bottom: 1px solid gray;
  }
+
+
+
 
  button {
   width: 50px;

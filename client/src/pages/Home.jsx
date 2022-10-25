@@ -8,33 +8,31 @@ import Stage from "./Stage";
 
 
 const Home = (props) => {
-  // Most all of your work for this lab will be done here in the HomePage component.
-
-  // Set up conditional rendering below to determine which component to show on our home page!
+ 
 
   let page = 0
 
   switch (props.currentPage) {
     case 0:
-      page = <AddBand incrementPage={props.incrementPage} />
+      page = <AddBand setNewBand={props.setNewBand} incrementPage={props.incrementPage}  newBand = {props.newBand}/>
       break
     case 1:
-      page = <PickSinger handleChange={props.handleChange}  incrementPage={props.incrementPage}  />
+      page = <PickSinger setNewBand={props.setNewBand}  incrementPage={props.incrementPage}  newBand = {props.newBand} />
       break
     case 2:
-      page = <PickGuitarist   handleChange={props.handleChange}  incrementPage={props.incrementPage} />
+      page = <PickGuitarist   setNewBand={props.setNewBand}  incrementPage={props.incrementPage} newBand = {props.newBand} />
       break
     case 3:
-      page = <PickBassist  handleChange={props.handleChange}  incrementPage={props.incrementPage}  />
+      page = <PickBassist  setNewBand={props.setNewBand}  incrementPage={props.incrementPage} newBand = {props.newBand} />
       break
     case 4:
-      page = <PickDrummer handleChange={props.handleChange}  incrementPage={props.incrementPage}  />
+      page = <PickDrummer setNewBand={props.setNewBand}  incrementPage={props.incrementPage}  newBand = {props.newBand} />
       break
     case 5:
-      page = <BandConfirm  handleChange={props.handleChange}  incrementPage={props.incrementPage}  />
+      page = <BandConfirm  setNewBand={props.setNewBand}  newBand = {props.newBand} incrementPage={props.incrementPage}  />
       break
     case 6:
-      page = <Stage handleChange={props.handleChange}  incrementPage={props.incrementPage} />
+      page = <Stage setNewBand={props.setNewBand}  incrementPage={props.incrementPage}  newBand = {props.newBand} />
       break
 
     default:

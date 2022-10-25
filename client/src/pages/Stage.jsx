@@ -10,6 +10,10 @@ const Stage = (props) => {
   
   return(
     <div>
+<h1 className="stageTitle"> 
+  Introducing : {props.newBand.name}
+</h1>
+
       {button}
     </div>
   )
