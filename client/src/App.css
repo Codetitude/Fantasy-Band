@@ -14,7 +14,7 @@ code {
 
 
 Nav {
-  background-color: #212121;
+  background-color: crimson;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -29,3 +29,19 @@ a {
 header nav a {
   margin: 0 1em;
 }
+
+.hometitle {
+
+  display: flex;
+  justify-content: center;
+  font-size: 150px;
+}
+
+ .nameband {
+
+  display: flex;
+  justify-content: center;
+  font-size: 100px;
+  align-items: center;
+
+ }

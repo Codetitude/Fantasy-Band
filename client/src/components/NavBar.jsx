@@ -9,6 +9,7 @@ const NavBar = () => {
     <header>
       <nav>
         <Link to = '/'>Create a Band</Link>
+        <Link to = '/PastBands'> Past Bands</Link>
        
       </nav>
     </header>
