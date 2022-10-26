@@ -3,6 +3,7 @@ import axios from 'axios'
 
 const PickSinger = (props) => {
   const [singers, setSingers] = useState([])
+  const [selectedSinger, setSelectedSinger] = useState('')
 
   useEffect(() => {
     const getSinger = async () => {
@@ -11,6 +12,7 @@ const PickSinger = (props) => {
         return musician.role === 'Singer'
       })
       setSingers(singersArray)
+      setSelectedSinger(singersArray[0])
     }
     getSinger()
   }, [])
@@ -22,10 +24,6 @@ const PickSinger = (props) => {
     button = <button onClick={props.incrementPage}>Next</button>
   }
 
-  const handleChange = (e) => {
-    setSingers(e.target.value)
-  }
-
   return (
     <div className="musicianForm">
       <br></br>
@@ -34,39 +32,42 @@ const PickSinger = (props) => {
         <div className="inputfield">
           <label> Choose an artist:</label>
 
-          <select>
-            <option disabled>Select a singer</option>
+          <select
+            onChange={(e) => {
+              const selectedSinger = singers.find((singer) => {
+                console.log(singer)
+                return singer.name === e.target.value
+              })
+              console.log(e.target.value)
+              setSelectedSinger(selectedSinger)
+            }}
+          >
+            <option disabled selected>
+              Select a singer
+            </option>
             {singers.map((singer) => (
-              <option> {singer.name}</option>
+              <option key={singer.id} value={singer.id}>
+                {singer.name}
+              </option>
             ))}
           </select>
           <br></br>
+          <br></br>
           <label> Band Origin:</label>
 
-          <span
-            type="text"
-            value={props.bandOrigin}
-            onChange={props.handleChange}
-            placeholder="Band Origin"
-          />
+          <span> {selectedSinger.bandOrigin}</span>
 
           <br></br>
+          <br></br>
           <label> Role:</label>
-          <input
-            type="text"
-            value={props.role}
-            onChange={props.handleChange}
-            placeholder="Role"
-          />
+          <span>{selectedSinger.role}</span>
+
+          <br></br>
           <br></br>
 
           <label> Rating:</label>
-          <input
-            type="text"
-            value={props.rating}
-            onChange={props.handleChange}
-            placeholder="Role"
-          />
+          <span>{selectedSinger.rating}</span>
+
           <br></br>
           <br></br>
         </div>
@@ -78,11 +79,3 @@ const PickSinger = (props) => {
 }
 
 export default PickSinger
-
-/*<select  onChange={props.handleChange} name={"name"}>
-<option  type = "text " value = {props.name}>Robert Plant
-  
-</option>
-</select>
-
-</label> */
