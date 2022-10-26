@@ -82,13 +82,37 @@ background-color: aqua;
 
  button {
   width: 50px;
+
+  justify-content: end;
   align-items:flex-end;
  }
+
+
+
+
+
+
+
+.bandConfirmTitle{
+
+  display:flex;
+  
+  justify-content: center;
+}
+
+
+/*  BandConfirm.js all 4 music role displays*/
+.musicianDisplay {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+}
 
 
  .bandConfirmPanel {
 
   display:flex;
+  
   
  }
 
@@ -112,4 +136,20 @@ background-color: aqua;
   display:flex;
   justify-content: center;
   align-self:center;
+ }
+
+
+ .totalRating {
+background-color: crimson;
+border: black 5px solid;
+border-radius: 200px; 
+
+
+align-items: center;
+max-width: fit-content;
+font-size: 40px;
+color:white;
+padding: 20px;
+margin: 10px;
+
  }

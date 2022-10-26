@@ -26,7 +26,11 @@ const AddBand = (props) => {
         placeholder="Give your band a name!"
         onChange={handleChange}
       ></input>
-      <button onClick={handleSubmit} type="submit">
+      <button
+        onClick={handleSubmit}
+        type="submit"
+        {...(bandName === '' ? 'disabled' : '')}
+      >
         Enter
       </button>
     </div>

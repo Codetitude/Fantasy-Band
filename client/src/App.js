@@ -1,8 +1,9 @@
 import './App.css'
-//import { Route, Routes } from 'react-router-dom'
+import { Route, Routes } from 'react-router-dom'
 import NavBar from './components/NavBar'
 import Home from './pages/Home'
 import { useState } from 'react'
+import PastBands from './pages/PastBands'
 
 const App = () => {
   const [currentPage, setCurrentPage] = useState(0)
@@ -28,14 +29,22 @@ const App = () => {
     <div>
       <NavBar />
       <main>
-        <Home
-          currentPage={currentPage}
-          incrementPage={incrementPage}
-          newBand={newBand}
-          setNewBand={setNewBand}
-          newMember={newMember}
-          setNewMember={setNewMember}
-        />
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <Home
+                currentPage={currentPage}
+                incrementPage={incrementPage}
+                newBand={newBand}
+                setNewBand={setNewBand}
+                newMember={newMember}
+                setNewMember={setNewMember}
+              />
+            }
+          />
+          <Route path="/PastBands" element={<PastBands />} />
+        </Routes>
       </main>
     </div>
   )
@@ -44,12 +53,12 @@ const App = () => {
 export default App
 
 /*<Routes>
-<Route path="/" element={<AddBand />} />
+
 <Route path="/PickSinger" element={<PickSinger />} />
 <Route path="/PickGuitarist" element={<PickGuitarist />} />
 <Route path="/PickBassist" element={<PickBassist />} />
 <Route path="/PickDrummer" element={<PickDrummer />} />
 <Route path="/BandConfirm" element={<BandConfirm />} />
 <Route path="/Stage" element={<Stage />} />
-<Route path="/PastBands" element={<PastBands />} />
+
 </Routes>*/

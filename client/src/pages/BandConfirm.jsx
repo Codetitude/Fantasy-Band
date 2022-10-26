@@ -1,27 +1,51 @@
+import { useEffect} from 'react'
+import axios from 'axios'
+
+
+
 const BandConfirm = (props) => {
+
+
+const submitForm = () => {
+  const res = axios.post(`http://localhost:3001/musicians/newband`, props.newBand)
+console.log(res)
+  props.incrementPage()
+
+}
+
 
 
 
   let button 
-  if (props.name === '' || props.bandOrigin === '' || props.role === ''){
+  if (props.newBand.name === '' ){
    button =<button disabled>Next</button>
   } else {
-    button = <button onClick={props.incrementPage}>Next</button>
+    button = <button onClick={submitForm}>Next</button>
   }
   
+  console.log(props.newBand.members[0].name)
 
   return(
-    <div>
-
+    <div className="totalConfirmPage">
+<section className="BandConfirmTitle">
 <h1 className="bandNameConfirmPage"> {props.newBand.name}</h1>
-<div> {props.newBand.totalRating}</div>
+<div className="totalRating">  Rating Score <br></br>{props.newBand.totalRating}</div>
+</section>
+
+
+<div className="musicianDisplay"> 
 <section className="bandConfirmPanel">
 <img
 className="profilePic"
 alt="Singer"
 src= "https://i.imgur.com/xQMMX4Qt.jpg"
 />
+<br></br>
+<form>
+  <span >{props.newBand.members[0].name}</span> <button>change</button>
+  <br></br>
 
+</form>
 </section>
 
 <section className="bandConfirmPanel">
@@ -54,7 +78,7 @@ src= "https://i.imgur.com/MGvYNo8t.jpg"
 />
 
 </section>
-
+</div>
 
       {button}
     </div>
