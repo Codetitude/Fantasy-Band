@@ -15,10 +15,11 @@ const AddBand = (props) => {
   }
 
   return (
-    <div>
+    <div className="frontpage">
       <h1 className="hometitle">Fantasy Band </h1>
 
       <input
+        className="frontpageInput"
         type="text"
         name="search"
         value={props.bandName}

@@ -1,26 +1,26 @@
 import { useEffect, useState } from 'react'
 import axios from 'axios'
 
-const PickSinger = (props) => {
-  const [singers, setSingers] = useState([])
-  const [selectedSinger, setSelectedSinger] = useState('')
+const PickDrummer = (props) => {
+  const [drummers, setDrummers] = useState([])
+  const [selectedDrummer, setSelectedDrummer] = useState('')
 
   useEffect(() => {
-    const getSinger = async () => {
+    const getDrummer = async () => {
       const response = await axios.get(`http://localhost:3001/musicians/list`)
-      let singersArray = response.data.musicians.filter((musician) => {
-        return musician.role === 'Singer'
+      let drummersArray = response.data.musicians.filter((musician) => {
+        return musician.role === 'Drummer'
       })
-      setSingers(singersArray)
+      setDrummers(drummersArray)
     }
-    getSinger()
+    getDrummer()
   }, [])
 
   const handleSubmit = (e) => {
     e.preventDefault()
     let tempBand = { ...props.newBand }
-    tempBand.members.push(selectedSinger)
-    tempBand.totalRating += selectedSinger.rating
+    tempBand.members.push(selectedDrummer)
+    tempBand.totalRating += selectedDrummer.rating
 
     props.setNewBand(tempBand)
 
@@ -29,12 +29,12 @@ const PickSinger = (props) => {
   }
 
   const handleChange = (e) => {
-    const selectedSinger = singers.find((singer) => {
-      console.log(singer)
-      return singer.name === e.target.value
+    const selectedDrummer = drummers.find((drummer) => {
+      console.log(drummer)
+      return drummer.name === e.target.value
     })
     console.log(e.target.value)
-    setSelectedSinger(selectedSinger)
+    setSelectedDrummer(selectedDrummer)
   }
 
   let button
@@ -52,17 +52,17 @@ const PickSinger = (props) => {
     <div className="musicianForm">
       <br></br>
       <form className="artistForm">
-        <h2 className="musicianTitle"> Choose your Singer!</h2>
+        <h2 className="musicianTitle"> Choose your Drummer!</h2>
         <div className="inputfield">
           <label> Choose an artist:</label>
 
           <select onChange={handleChange}>
             <option disabled selected>
-              Select a singer
+              Select a drummer
             </option>
-            {singers.map((singer) => (
-              <option key={singer.id} value={singer.id}>
-                {singer.name}
+            {drummers.map((drummer) => (
+              <option key={drummer.id} value={drummer.id}>
+                {drummer.name}
               </option>
             ))}
           </select>
@@ -70,18 +70,18 @@ const PickSinger = (props) => {
           <br></br>
           <label> Band Origin:</label>
 
-          <span> {selectedSinger.bandOrigin}</span>
+          <span> {selectedDrummer.bandOrigin}</span>
 
           <br></br>
           <br></br>
           <label> Role:</label>
-          <span>{selectedSinger.role}</span>
+          <span>{selectedDrummer.role}</span>
 
           <br></br>
           <br></br>
 
           <label> Rating:</label>
-          <span>{selectedSinger.rating}</span>
+          <span>{selectedDrummer.rating}</span>
 
           <br></br>
           <br></br>
@@ -93,4 +93,4 @@ const PickSinger = (props) => {
   )
 }
 
-export default PickSinger
+export default PickDrummer

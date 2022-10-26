@@ -17,7 +17,8 @@ const Home = (props) => {
       page = <AddBand setNewBand={props.setNewBand} incrementPage={props.incrementPage}  newBand = {props.newBand}/>
       break
     case 1:
-      page = <PickSinger setNewBand={props.setNewBand}  incrementPage={props.incrementPage}  newBand = {props.newBand} />
+      page = <PickSinger setNewBand={props.setNewBand}  incrementPage={props.incrementPage}  newBand = {props.newBand}
+      newMember={props.newMember} setNewMember={props.setNewMember} />
       break
     case 2:
       page = <PickGuitarist   setNewBand={props.setNewBand}  incrementPage={props.incrementPage} newBand = {props.newBand} />

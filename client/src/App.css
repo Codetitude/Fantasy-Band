@@ -43,6 +43,7 @@ background-color: aqua;
   display: flex;
   justify-content: center;
   font-size: 150px;
+  flex-wrap: wrap;
 }
 
  .nameband {
@@ -82,4 +83,33 @@ background-color: aqua;
  button {
   width: 50px;
   align-items:flex-end;
+ }
+
+
+ .bandConfirmPanel {
+
+  display:flex;
+  
+ }
+
+ .profilePic {
+  border: black 5px solid;
+  border-radius: 15px;
+  display: flex;
+ }
+
+ .frontpage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  
+ }
+
+
+ .frontpageInput{
+  max-width: 300px;
+  
+  display:flex;
+  justify-content: center;
+  align-self:center;
  }

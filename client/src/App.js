@@ -17,6 +17,13 @@ const App = () => {
     totalRating: 0
   })
 
+  const [newMember, setNewMember] = useState({
+    ChooseAnArtist: '',
+    bandOrigin: '',
+    role: '',
+    rating: 0
+  })
+
   return (
     <div>
       <NavBar />
@@ -26,6 +33,8 @@ const App = () => {
           incrementPage={incrementPage}
           newBand={newBand}
           setNewBand={setNewBand}
+          newMember={newMember}
+          setNewMember={setNewMember}
         />
       </main>
     </div>
