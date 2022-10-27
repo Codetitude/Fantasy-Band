@@ -72,11 +72,21 @@ const deleteBand = async (req, res) => {
   }
 }
 
+const getBand = async (req, res) => {
+  try {
+    const bands = await Band.find()
+    return res.status(200).json({ bands })
+  } catch (error) {
+    return res.status(500).send(error.message)
+  }
+}
+
 module.exports = {
   createMusician,
   getAllMusicians,
   getMusicianById,
   createBand,
   updateBand,
-  deleteBand
+  deleteBand,
+  getBand
 }

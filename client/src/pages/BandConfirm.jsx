@@ -8,8 +8,9 @@ const BandConfirm = (props) => {
 
 const submitForm = () => {
   const res = axios.post(`http://localhost:3001/musicians/newband`, props.newBand)
-console.log(res)
   props.incrementPage()
+  console.log(res.data.band._id)
+  
 
 }
 
@@ -18,9 +19,9 @@ console.log(res)
 
   let button 
   if (props.newBand.name === '' ){
-   button =<button disabled>Next</button>
+   button =<button disabled>Submit</button>
   } else {
-    button = <button onClick={submitForm}>Next</button>
+    button = <button onClick={submitForm}>Submit</button>
   }
   
   console.log(props.newBand.members[0].name)
@@ -42,7 +43,7 @@ src= "https://i.imgur.com/xQMMX4Qt.jpg"
 />
 <br></br>
 <form>
-  <span >{props.newBand.members[0].name}</span> <button>change</button>
+  <span >{props.newBand.members[0].name}</span> 
   <br></br>
 
 </form>

@@ -29,7 +29,7 @@ const AddBand = (props) => {
       <button
         onClick={handleSubmit}
         type="submit"
-        {...(bandName === '' ? 'disabled' : '')}
+        //{...(bandName === '' ? 'disabled' : '')}
       >
         Enter
       </button>
