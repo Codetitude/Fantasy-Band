@@ -4,29 +4,44 @@ import axios from 'axios'
 
 
 const PastBands = (props) => {
+  
+  const [getbands , setGetBands] = useState([])
 
-const [getbands , setGetBands] = useState([])
+  const [updateBand, setUpdateBand] = useState({name:''})
 
-useEffect(() => {
+  
   const getCreatedBand  = async () => {
     const response = await axios.get(`http://localhost:3001/musicians/newband`)
    setGetBands(response.data.bands)
    console.log(response)
     }
-   getCreatedBand()
+  
+
+
+  useEffect(() => {
+    getCreatedBand()
+
   }
  
 , [])
 
 
-
-
-const handleDelete = (id) => {
+const handleDelete = async (id) => {
   
-  const res = axios.findByIdAndDelete(`http://localhost:3001/musicians/newband/`, (id))
-  console.log(res, id)
+  const res =  await axios.delete(`http://localhost:3001/musicians/newband/${id}`)
+  getCreatedBand()
   
 
+}
+
+
+const handleUpdate = async (id) => {
+  
+  const res =  await axios.put(`http://localhost:3001/musicians/newband/${id}`,updateBand  )
+  
+ 
+  getCreatedBand()
+  
 
 }
 
@@ -38,12 +53,13 @@ const handleDelete = (id) => {
     <div>  
             
          {getbands.map((getband)  => (
-      <div key={getband.id} value={getband.id} name={getband.name}>
+      <div key={getband._id} >
         
         {getband.name}
-        <input placeholder='new band name'></input>
-         <button>update name</button>
-        <button onClick={handleDelete}>delete band</button> 
+        <input onChange={(e) => {setUpdateBand({name :e.target.value})}} placeholder='new band name'
+       ></input>
+         <button onClick={() => {handleUpdate(getband._id)}}>update name</button>
+        <button onClick={() => handleDelete(getband._id)}>delete band</button> 
 
       </div>
     ))}   

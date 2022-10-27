@@ -15,24 +15,25 @@ const AddBand = (props) => {
   }
 
   return (
-    <div className="frontpage">
+    <div>
       <h1 className="hometitle">Fantasy Band </h1>
-
-      <input
-        className="frontpageInput"
-        type="text"
-        name="search"
-        value={props.bandName}
-        placeholder="Give your band a name!"
-        onChange={handleChange}
-      ></input>
-      <button
-        onClick={handleSubmit}
-        type="submit"
-        //{...(bandName === '' ? 'disabled' : '')}
-      >
-        Enter
-      </button>
+      <section className="frontpage-field">
+        <input
+          type="text"
+          name="search"
+          value={props.bandName}
+          placeholder="Give your band a name!"
+          onChange={handleChange}
+        ></input>
+        <button
+          onClick={handleSubmit}
+          type="submit"
+          fontSize="60px"
+          disabled={bandName === '' ? true : false}
+        >
+          Enter
+        </button>
+      </section>
     </div>
   )
 }

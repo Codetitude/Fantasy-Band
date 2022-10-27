@@ -49,6 +49,7 @@ const createBand = async (req, res) => {
 }
 
 const updateBand = async (req, res) => {
+  console.log(req.body)
   try {
     const band = await Band.findByIdAndUpdate(req.params.id, req.body, {
       new: true

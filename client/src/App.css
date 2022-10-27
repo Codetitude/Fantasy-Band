@@ -37,60 +37,70 @@ background-color: aqua;
 
 }
 
-
+/* first page */
 .hometitle {
 
   display: flex;
   justify-content: center;
   font-size: 150px;
   flex-wrap: wrap;
+  font-family: 'Monoton', cursive;
+
 }
 
- .nameband {
+.frontpage-field {
 
   display: flex;
   justify-content: center;
-  font-size: 100px;
-  align-items: center;
-  flex-wrap: wrap;
-
  }
 
+
+ input {
+  height: 50px;
+ }
+
+/* musician props pages 2-5 */
  .musicianForm {
 
   background-color: white;
   display: flex;
-  
+  max-width: 300px;
   justify-content: center;
   align-items: center;
   height: 45vh;
-  padding: 50px;
+  padding: 20px;
   flex-wrap: wrap;
   border: 10px solid black;
   border-radius: 15px;
   margin: 20px;
  }
 
- .musicianTitle {
+
+ .artistForm {
+
+  width: 250px;
+ }
+
+
+
+
+ .choose-your-role-title {
 
   background-color: crimson;
-  border-bottom: 1px solid gray;
+  border-bottom: 2px solid black;
+  align-self: center;
+  
  }
 
 
 
 
- button {
-  width: 50px;
-
-  justify-content: end;
-  align-items:flex-end;
- }
-
-
-
-
-
+/*  BandConfirm page 6*/
+.musicianDisplay {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+}
 
 
 .bandConfirmTitle{
@@ -99,15 +109,6 @@ background-color: aqua;
   
   justify-content: center;
 }
-
-
-/*  BandConfirm.js all 4 music role displays*/
-.musicianDisplay {
-  display: flex;
-  justify-content: center;
-  margin: 20px;
-}
-
 
  .bandConfirmPanel {
 
@@ -122,21 +123,8 @@ background-color: aqua;
   display: flex;
  }
 
- .frontpage {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  
- }
 
 
- .frontpageInput{
-  max-width: 300px;
-  
-  display:flex;
-  justify-content: center;
-  align-self:center;
- }
 
 
  .totalRating {

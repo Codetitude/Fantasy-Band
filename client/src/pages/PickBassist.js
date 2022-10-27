@@ -52,7 +52,7 @@ const PickBassist = (props) => {
     <div className="musicianForm">
       <br></br>
       <form className="artistForm">
-        <h2 className="musicianTitle"> Choose your Bassist!</h2>
+        <h2 className="choose-your-role-title"> Choose your Bassist!</h2>
         <div className="inputfield">
           <label> Choose an artist:</label>
 
