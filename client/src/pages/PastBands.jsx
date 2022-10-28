@@ -57,7 +57,7 @@ const handleUpdate = async (id) => {
         
         {getband.name}
         <label >  :  &nbsp; &nbsp; &nbsp;  </label>
-        <div >
+        <div className='update' >
         <input onChange={(e) => {setUpdateBand({name :e.target.value})}} placeholder='new band name'
        type = "text"></input>
          <button onClick={() => {handleUpdate(getband._id)}}>update name</button>

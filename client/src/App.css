@@ -244,17 +244,33 @@ margin: 10px;
 
  /* past bands page */
 
+
+/* .pastbands {
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+} */
+
+
+
  .pastbandlist {
 
   display: flex;
-  margin: 15px 30px;
+  margin: 30px 500px;
   padding: 5px;
   font-size: 40px;
-  justify-content:center;
+  justify-content:right;
   align-items: center;
+ 
   
  }
 
+
+ .update {
+
+  display:flex;
+ }
 
 
  .input-buttons{
@@ -267,7 +283,7 @@ margin: 10px;
 
  .stage{
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   flex-wrap: wrap;
   font-size: 55px;
@@ -282,6 +298,11 @@ margin: 10px;
   padding: 20px;
  }
 
+ .container {
+
+  display: flex;
+  
+ }
 
 
 

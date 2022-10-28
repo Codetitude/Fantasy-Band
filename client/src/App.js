@@ -27,7 +27,7 @@ const App = () => {
 
   return (
     <div>
-      <NavBar />
+      <NavBar setCurrentPage={setCurrentPage} />
       <main className="main body">
         <Routes>
           <Route

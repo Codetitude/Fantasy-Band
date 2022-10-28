@@ -18,6 +18,10 @@ const PickDrummer = (props) => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
+    const res = axios.post(
+      `http://localhost:3001/musicians/newband`,
+      props.newBand
+    )
     let tempBand = { ...props.newBand }
     tempBand.members.push(selectedDrummer)
     tempBand.totalRating += selectedDrummer.rating
@@ -38,12 +42,12 @@ const PickDrummer = (props) => {
   }
 
   let button
-  if (props.name === '') {
-    button = <button disabled>Next</button>
+  if (selectedDrummer.bandOrigin === '') {
+    button = <button disabled>Let us Rock</button>
   } else {
     button = (
       <button className="musicianButton" onClick={handleSubmit} type="submit">
-        Next
+        Let us Rock
       </button>
     )
   }

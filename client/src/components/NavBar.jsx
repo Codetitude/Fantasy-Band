@@ -3,13 +3,18 @@ import {Link} from 'react-router-dom'
 
 
 
-const NavBar = () => {
+
+
+
+
+
+const NavBar = (props) => {
 
   return (
     <header>
       <nav>
       <Link to = '/PastBands'> Past Bands</Link>
-        <Link to = '/'>Home</Link>
+        <Link onClick={() =>  props.setCurrentPage(0)} to = '/'>Home</Link>
       
        
       </nav>
