@@ -34,10 +34,16 @@
 
 ##### **_Screenshots_**
 
----
+## ![Imgur](https://i.imgur.com/oHuHAHDm.jpg)
 
 ##### **_Future Updates_**
+
+- [ ] Implement audio
+- [ ] Give individual musicians crud options
 
 ---
 
 ##### **_Credits_**
+
+[Google_Images](https://www.google.com/)
+[freepik](https://www.freepik.com/)
