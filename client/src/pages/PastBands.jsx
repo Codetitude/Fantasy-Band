@@ -50,17 +50,19 @@ const handleUpdate = async (id) => {
 
 
   return(
-    <div>  
+    <div className = 'pastbands'>  
             
          {getbands.map((getband)  => (
-      <div key={getband._id} >
+      <div key={getband._id}  className = "pastbandlist">
         
         {getband.name}
+        <label >  :  &nbsp; &nbsp; &nbsp;  </label>
+        <div >
         <input onChange={(e) => {setUpdateBand({name :e.target.value})}} placeholder='new band name'
-       ></input>
+       type = "text"></input>
          <button onClick={() => {handleUpdate(getband._id)}}>update name</button>
         <button onClick={() => handleDelete(getband._id)}>delete band</button> 
-
+       </div>
       </div>
     ))}   
     </div>

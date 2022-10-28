@@ -28,7 +28,7 @@ const App = () => {
   return (
     <div>
       <NavBar />
-      <main>
+      <main className="main body">
         <Routes>
           <Route
             path="/"
@@ -45,20 +45,14 @@ const App = () => {
           />
           <Route path="/PastBands" element={<PastBands />} />
         </Routes>
+        <img
+          className="crowd"
+          src="https://i.imgur.com/BMqTWii.jpg"
+          alt="footer"
+        />
       </main>
     </div>
   )
 }
 
 export default App
-
-/*<Routes>
-
-<Route path="/PickSinger" element={<PickSinger />} />
-<Route path="/PickGuitarist" element={<PickGuitarist />} />
-<Route path="/PickBassist" element={<PickBassist />} />
-<Route path="/PickDrummer" element={<PickDrummer />} />
-<Route path="/BandConfirm" element={<BandConfirm />} />
-<Route path="/Stage" element={<Stage />} />
-
-</Routes>*/

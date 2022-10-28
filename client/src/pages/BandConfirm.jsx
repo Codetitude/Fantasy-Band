@@ -42,11 +42,11 @@ alt="Singer"
 src= "https://i.imgur.com/xQMMX4Qt.jpg"
 />
 <br></br>
-<form>
+
   <span >{props.newBand.members[0].name}</span> 
   <br></br>
 
-</form>
+
 </section>
 
 <section className="bandConfirmPanel">

@@ -8,8 +8,9 @@ const NavBar = () => {
   return (
     <header>
       <nav>
-        <Link to = '/'>Create a Band</Link>
-        <Link to = '/PastBands'> Past Bands</Link>
+      <Link to = '/PastBands'> Past Bands</Link>
+        <Link to = '/'>Home</Link>
+      
        
       </nav>
     </header>

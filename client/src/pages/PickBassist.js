@@ -42,17 +42,17 @@ const PickBassist = (props) => {
     button = <button disabled>Next</button>
   } else {
     button = (
-      <button onClick={handleSubmit} type="submit">
+      <button className="musicianButton" onClick={handleSubmit} type="submit">
         Next
       </button>
     )
   }
 
   return (
-    <div className="musicianForm">
+    <div className="musicianPage">
       <br></br>
-      <form className="artistForm">
-        <h2 className="choose-your-role-title"> Choose your Bassist!</h2>
+      <div className="musicianForm">
+        <h2 className="choose-your-role-title"> Choose a Bassist!</h2>
         <div className="inputfield">
           <label> Choose an artist:</label>
 
@@ -88,7 +88,10 @@ const PickBassist = (props) => {
         </div>
 
         {button}
-      </form>
+      </div>
+      <div>
+        <img src="https://i.imgur.com/UsIHCECl.jpg" alt="bassist" />
+      </div>
     </div>
   )
 }

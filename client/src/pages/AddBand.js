@@ -15,10 +15,18 @@ const AddBand = (props) => {
   }
 
   return (
-    <div>
+    <div className="frontpage-field">
       <h1 className="hometitle">Fantasy Band </h1>
-      <section className="frontpage-field">
+
+      <img
+        className="Guitar"
+        alt="cover"
+        src="https://i.imgur.com/lT4wWacl.png"
+      />
+      <br></br>
+      <section className="frontpageinputs">
         <input
+          autocomplete="off"
           type="text"
           name="search"
           value={props.bandName}
@@ -27,8 +35,6 @@ const AddBand = (props) => {
         ></input>
         <button
           onClick={handleSubmit}
-          type="submit"
-          fontSize="60px"
           disabled={bandName === '' ? true : false}
         >
           Enter

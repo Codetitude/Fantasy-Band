@@ -29,10 +29,10 @@ const Home = (props) => {
     case 4:
       page = <PickDrummer setNewBand={props.setNewBand}  incrementPage={props.incrementPage}  newBand = {props.newBand} />
       break
-    case 5:
+    case 6:
       page = <BandConfirm  setNewBand={props.setNewBand}  newBand = {props.newBand} incrementPage={props.incrementPage}  />
       break
-    case 6:
+    case 5:
       page = <Stage setNewBand={props.setNewBand}  incrementPage={props.incrementPage}  newBand = {props.newBand} />
       break
 

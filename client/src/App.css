@@ -1,10 +1,21 @@
+
+@media (orientation: landscape) {
+  body {
+    flex-direction: row;
+  }
+}
+
 body {
   margin: 0;
+  padding: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: white;
+height: 80vh;
+
 }
 
 code {
@@ -32,39 +43,118 @@ header nav a {
 }
 
 
-body {
-background-color: aqua;
+
+
+
+.mainbody{
+
+  display:flex;
+  height: 100vh;
+  justify-content: space-around;
 
 }
+
+.crowd {
+
+  align-self: flex-end;
+  height: 25%;
+  width: 100%;
+  opacity: .5;
+  margin: 0;
+  z-index: 0;
+  
+  bottom: 1;
+
+}
+input {
+  height: 45px;
+   
+  background-color: transparent;
+  
+  border: 3px solid crimson;
+text-align: center;
+  padding: 0.5em 0.2em;
+  width: auto;
+  transition: all 0.2s;
+  font-size: 1.3rem;
+  
+}
+
+input::placeholder{
+  text-align: center;
+}
+ 
+
+
+
+
+input[type="text"] {
+
+  font-size: 23px;
+ }
+
+ button {
+  height: 74px;
+  cursor: pointer;
+  border: 3px solid crimson;
+  
+ }
+ button :hover {
+
+  transform: scale(1.04);
+ }
+
+
 
 /* first page */
-.hometitle {
-
-  display: flex;
-  justify-content: center;
-  font-size: 150px;
-  flex-wrap: wrap;
-  font-family: 'Monoton', cursive;
-
-}
 
 .frontpage-field {
 
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items:center;
+  
+  padding: 10px;
  }
 
 
- input {
-  height: 50px;
- }
+.hometitle {
+
+  
+  justify-content: center;
+  font-size: 130px;
+  font-family: 'Monoton', cursive;
+  margin: 15px;
+
+}
+
+
+
+.frontpageinputs{
+  
+  display: flex;
+}
+
+
+
 
 /* musician props pages 2-5 */
- .musicianForm {
+ 
+
+.musicianPage{
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.musicianForm {
 
   background-color: white;
-  display: flex;
-  max-width: 300px;
+  
+  max-width: 400px;
   justify-content: center;
   align-items: center;
   height: 45vh;
@@ -72,18 +162,11 @@ background-color: aqua;
   flex-wrap: wrap;
   border: 10px solid black;
   border-radius: 15px;
-  margin: 20px;
+  margin: 30px;
+  font-size: 25px;
  }
 
-
- .artistForm {
-
-  width: 250px;
- }
-
-
-
-
+ 
  .choose-your-role-title {
 
   background-color: crimson;
@@ -93,6 +176,22 @@ background-color: aqua;
  }
 
 
+ .musicianButton {
+
+  align-self: flex-end;
+  justify-content: flex-end;
+  width: 100px;
+ }
+
+ select {
+  height: 35px;
+ }
+
+ label {
+color:crimson;
+text-decoration: solid;
+
+ }
 
 
 /*  BandConfirm page 6*/
@@ -131,7 +230,7 @@ background-color: aqua;
 background-color: crimson;
 border: black 5px solid;
 border-radius: 200px; 
-
+text-align: center;
 
 align-items: center;
 max-width: fit-content;
@@ -141,3 +240,81 @@ padding: 20px;
 margin: 10px;
 
  }
+
+
+ /* past bands page */
+
+ .pastbandlist {
+
+  display: flex;
+  margin: 15px 30px;
+  padding: 5px;
+  font-size: 40px;
+  justify-content:center;
+  align-items: center;
+  
+ }
+
+
+
+ .input-buttons{
+  display: flex;
+  justify-content: right;
+  align-items: start;
+ }
+
+
+
+ .stage{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  font-size: 55px;
+  align-items: center;
+  font-family: 'Rye', cursive;
+ }
+
+ .stageTitle {
+  justify-self: center;
+  align-self: center;
+  border-bottom: crimson 2px solid;
+  padding: 20px;
+ }
+
+
+
+
+.member {
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  
+}
+
+span {
+  font-size: 25px;
+  border-bottom:  crimson 2px solid;
+  
+  
+
+}
+
+ .totalRating {
+  background-color: crimson;
+  border: black 5px solid;
+  border-radius: 200px; 
+  text-align: center;
+  justify-content: flex-start;
+  align-items: center;
+  max-width: fit-content;
+  font-size: 40px;
+  color:white;
+  padding: 20px;
+  margin: 10px;
+  
+   }
+  
