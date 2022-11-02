@@ -10,7 +10,7 @@ const PickGuitarist = (props) => {
   
     useEffect(() => {
       const getGuitarist = async () => {
-        const response = await axios.get(`http://localhost:3001/musicians/list`)
+        const response = await axios.get(`/musicians/list`)
         let guitaristsArray = response.data.musicians.filter((musician) => {
           return musician.role === 'Guitarist'
         })

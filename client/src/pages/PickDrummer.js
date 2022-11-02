@@ -7,7 +7,7 @@ const PickDrummer = (props) => {
 
   useEffect(() => {
     const getDrummer = async () => {
-      const response = await axios.get(`http://localhost:3001/musicians/list`)
+      const response = await axios.get(`/musicians/list`)
       let drummersArray = response.data.musicians.filter((musician) => {
         return musician.role === 'Drummer'
       })
@@ -18,10 +18,7 @@ const PickDrummer = (props) => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    const res = axios.post(
-      `http://localhost:3001/musicians/newband`,
-      props.newBand
-    )
+    const res = axios.post(`/musicians/newband`, props.newBand)
     let tempBand = { ...props.newBand }
     tempBand.members.push(selectedDrummer)
     tempBand.totalRating += selectedDrummer.rating

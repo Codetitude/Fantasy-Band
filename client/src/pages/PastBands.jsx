@@ -11,7 +11,7 @@ const PastBands = (props) => {
 
   
   const getCreatedBand  = async () => {
-    const response = await axios.get(`http://localhost:3001/musicians/newband`)
+    const response = await axios.get(`/musicians/newband`)
    setGetBands(response.data.bands)
    console.log(response)
     }
@@ -28,7 +28,7 @@ const PastBands = (props) => {
 
 const handleDelete = async (id) => {
   
-  const res =  await axios.delete(`http://localhost:3001/musicians/newband/${id}`)
+  const res =  await axios.delete(`/musicians/newband/${id}`)
   getCreatedBand()
   
 
@@ -37,7 +37,7 @@ const handleDelete = async (id) => {
 
 const handleUpdate = async (id) => {
   
-  const res =  await axios.put(`http://localhost:3001/musicians/newband/${id}`,updateBand  )
+  const res =  await axios.put(`/musicians/newband/${id}`,updateBand  )
   
  
   getCreatedBand()
