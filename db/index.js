@@ -1,9 +1,9 @@
 const mongoose = require('mongoose')
 
-let MONGODB_URI = 'mongodb://127.0.0.1:27017/musiciansDatabase'
-
 mongoose
-  .connect(MONGODB_URI)
+  .connect(
+    'mongodb+srv://myFantasyBand:1234@fantasy-band.uxq6m0x.mongodb.net/?retryWrites=true&w=majority'
+  )
   .then(() => {
     console.log('Successfully connected to MongoDB.')
   })
