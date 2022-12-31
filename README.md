@@ -13,7 +13,7 @@
 
 ##### **_Description_**
 
-###### This project is called Fantasy Band! The general idea is to create a band comprising of 4 members , which are chosen from a database of iconic bands. It's like fantasy football but with " Rock n Roll"!
+###### This project is called Fantasy Band! The general idea is to create a band comprising of 4 members, which are chosen from a database of iconic bands.It's like fantasy football but with " Rock n Roll"!
 
 ---
 
